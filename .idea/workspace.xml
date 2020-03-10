@@ -1,10 +1,157 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1f08f003-b4ef-44eb-bc23-cfc8691c984d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Skeleton/Data_read.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Butterfly.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Butterfly.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Piyush" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1YvDiGr0X8E8bCLTLYyVPO429Vj" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.gutterIcons" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Data_read" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Butterfly" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Skeleton" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Skeleton/Data_read.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.Data_read" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1f08f003-b4ef-44eb-bc23-cfc8691c984d" name="Default Changelist" comment="" />
+      <created>1583814299645</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1583814299645</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Piyush : First Commit">
+      <created>1583814515954</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1583814515954</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Piyush : First Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Piyush : First Commit" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="249" y="4" width="778" height="716" key="CommitChangelistDialog2" timestamp="1583814515789">
+      <screen x="0" y="27" width="1280" height="693" />
+    </state>
+    <state x="249" y="4" width="778" height="716" key="CommitChangelistDialog2/0.27.1280.693@0.27.1280.693" timestamp="1583814515789" />
+    <state width="1257" height="196" key="GridCell.Tab.0.bottom" timestamp="1583815580380">
+      <screen x="0" y="27" width="1280" height="693" />
+    </state>
+    <state width="1257" height="196" key="GridCell.Tab.0.bottom/0.27.1280.693@0.27.1280.693" timestamp="1583815580380" />
+    <state width="1257" height="196" key="GridCell.Tab.0.center" timestamp="1583815580380">
+      <screen x="0" y="27" width="1280" height="693" />
+    </state>
+    <state width="1257" height="196" key="GridCell.Tab.0.center/0.27.1280.693@0.27.1280.693" timestamp="1583815580380" />
+    <state width="1257" height="196" key="GridCell.Tab.0.left" timestamp="1583815580380">
+      <screen x="0" y="27" width="1280" height="693" />
+    </state>
+    <state width="1257" height="196" key="GridCell.Tab.0.left/0.27.1280.693@0.27.1280.693" timestamp="1583815580380" />
+    <state width="1257" height="196" key="GridCell.Tab.0.right" timestamp="1583815580380">
+      <screen x="0" y="27" width="1280" height="693" />
+    </state>
+    <state width="1257" height="196" key="GridCell.Tab.0.right/0.27.1280.693@0.27.1280.693" timestamp="1583815580380" />
+    <state width="1257" height="196" key="GridCell.Tab.1.bottom" timestamp="1583815499591">
+      <screen x="0" y="27" width="1280" height="693" />
+    </state>
+    <state width="1257" height="196" key="GridCell.Tab.1.bottom/0.27.1280.693@0.27.1280.693" timestamp="1583815499591" />
+    <state width="1257" height="196" key="GridCell.Tab.1.center" timestamp="1583815499591">
+      <screen x="0" y="27" width="1280" height="693" />
+    </state>
+    <state width="1257" height="196" key="GridCell.Tab.1.center/0.27.1280.693@0.27.1280.693" timestamp="1583815499591" />
+    <state width="1257" height="196" key="GridCell.Tab.1.left" timestamp="1583815499591">
+      <screen x="0" y="27" width="1280" height="693" />
+    </state>
+    <state width="1257" height="196" key="GridCell.Tab.1.left/0.27.1280.693@0.27.1280.693" timestamp="1583815499591" />
+    <state width="1257" height="196" key="GridCell.Tab.1.right" timestamp="1583815499591">
+      <screen x="0" y="27" width="1280" height="693" />
+    </state>
+    <state width="1257" height="196" key="GridCell.Tab.1.right/0.27.1280.693@0.27.1280.693" timestamp="1583815499591" />
+    <state x="132" y="4" key="SettingsEditor" timestamp="1583816113666">
+      <screen x="0" y="27" width="1280" height="693" />
+    </state>
+    <state x="132" y="4" key="SettingsEditor/0.27.1280.693@0.27.1280.693" timestamp="1583816113666" />
+    <state x="302" y="179" key="com.intellij.ide.util.TipDialog" timestamp="1583816088862">
+      <screen x="0" y="27" width="1280" height="693" />
+    </state>
+    <state x="302" y="179" key="com.intellij.ide.util.TipDialog/0.27.1280.693@0.27.1280.693" timestamp="1583816088862" />
+    <state x="412" y="269" width="451" height="190" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1583816180394">
+      <screen x="0" y="27" width="1280" height="693" />
+    </state>
+    <state x="412" y="269" width="451" height="190" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.27.1280.693@0.27.1280.693" timestamp="1583816180394" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Skeleton/Data_read.py</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
