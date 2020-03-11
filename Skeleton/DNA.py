@@ -1,4 +1,5 @@
 from Skeleton.Data_read import import_or_install
+import pip
 
 project = 'titanic'
 

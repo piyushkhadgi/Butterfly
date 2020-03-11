@@ -1,17 +1,5 @@
 
 
-
-
-import subprocess
-import pandas
-
-import pip
-
-
-
-
-
-
 folder = 'k_'+project
 file_name = project+'.zip'
 root_path = '/home/swayush/ML/'
@@ -27,9 +15,9 @@ out = subprocess.check_output(["ls",root_path+folder]).decode("utf-8")
 if 'raw_data' in out.split('\n'): out = subprocess.check_output(["rm",'-r',root_path+folder+'/raw_data']).decode("utf-8")
 out = subprocess.check_output(["mkdir",root_path+folder+'/raw_data']).decode("utf-8")
 out = subprocess.check_output(["unzip",root_path+folder+'/'+file_name,'-d',root_path+folder+'/raw_data']).decode("utf-8")
-df_trn = pd.read_csv(root_path+folder+'/raw_data/train.csv')
+df_trn = pandas.read_csv(root_path+folder+'/raw_data/train.csv')
 df_trn['_data_'] = 'train'
-df_tst = pd.read_csv(root_path+folder+'/raw_data/test.csv')
+df_tst = pandas.read_csv(root_path+folder+'/raw_data/test.csv')
 df_tst['_data_'] = 'test'
 df = df_trn.append(df_tst, ignore_index=True)
 print(df.head())
