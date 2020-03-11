@@ -1,4 +1,16 @@
 import subprocess
+import pandas
+
+import pip
+
+
+
+def import_or_install(package):
+    try:
+        __import__(package)
+    except ImportError:
+        pip.main(['install', package])
+
 
 project = 'titanic'
 
@@ -14,12 +26,15 @@ out = subprocess.check_output(['kaggle','competitions','download',project]).deco
 out = subprocess.check_output(['cp',file_name,root_path+folder]).decode("utf-8")
 out = subprocess.check_output(["rm",file_name]).decode("utf-8")
 out = subprocess.check_output(["ls",root_path+folder]).decode("utf-8")
-if 'raw_data' not in out.split('\n'): out = subprocess.check_output(["mkdir",root_path+folder+'/raw_data']).decode("utf-8")
-#out = subprocess.check_output(["unzip",root_path+folder+'/'+file_name,'-d '+root_path+folder+'/raw_data').decode("utf-8")
-
-#out = subprocess.check_output(["pwd"]).decode("utf-8")
-#if file_name not in out.split(' '): print('out')
-print('-d '+root_path+folder+'/raw_data')
+if 'raw_data' in out.split('\n'): out = subprocess.check_output(["rm",'-r',root_path+folder+'/raw_data']).decode("utf-8")
+out = subprocess.check_output(["mkdir",root_path+folder+'/raw_data']).decode("utf-8")
+out = subprocess.check_output(["unzip",root_path+folder+'/'+file_name,'-d',root_path+folder+'/raw_data']).decode("utf-8")
+df_trn = pd.read_csv(root_path+folder+'/raw_data/train.csv')
+df_trn['_data_'] = 'train'
+df_tst = pd.read_csv(root_path+folder+'/raw_data/test.csv')
+df_tst['_data_'] = 'test'
+df = df_trn.append(df_tst, ignore_index=True)
+print(df.head())
 
 # todo: Ascertain path exists
 # todo: Download data if not present
