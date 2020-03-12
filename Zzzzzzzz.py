@@ -1,24 +1,17 @@
-from Bones import install
-from Bones import read
-from Bones import project_config
+from Bones import Install
+from Bones import Read
+from Bones import ProjectConfig
 
-packages = ['subprocess','pandas']
+Packages = ['subprocess','pandas']
 
-install(packages)
+Install(Packages)
 
-config = project_config()
+Config = ProjectConfig()
 
-df = read(config)
+Df = Read(Config)
 
 
 
-print(df)
-
-# todo: Feature understanding
-# todo: Missing Value
-# todo: Feature engineering
-# todo: Feature understanding
-# todo: Sampling code
 
 # todo: Train
 # todo: validate
