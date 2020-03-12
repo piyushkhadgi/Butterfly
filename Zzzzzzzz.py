@@ -1,6 +1,6 @@
-from skeleton import install
-from skeleton import read
-from skeleton import project_config
+from Bones import install
+from Bones import read
+from Bones import project_config
 
 packages = ['subprocess','pandas']
 
@@ -9,6 +9,8 @@ install(packages)
 config = project_config()
 
 df = read(config)
+
+
 
 print(df)
 
