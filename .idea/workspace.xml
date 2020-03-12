@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f08f003-b4ef-44eb-bc23-cfc8691c984d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/fly.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/skeleton.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Skeleton/DNA.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Skeleton/Data_read.py" beforeDir="false" afterPath="$PROJECT_DIR$/Skeleton/Data_read.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Skeleton/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Skeleton/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Skeleton/Data_read.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Skeleton/test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fly.py" beforeDir="false" afterPath="$PROJECT_DIR$/fly.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skeleton.py" beforeDir="false" afterPath="$PROJECT_DIR$/skeleton.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,7 +203,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583892947113</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Piyush : First Commit">
+      <created>1584031333846</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1584031333846</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -212,26 +218,26 @@
     <option name="LAST_COMMIT_MESSAGE" value="Piyush : First Commit" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="249" y="4" width="778" height="716" key="CommitChangelistDialog2" timestamp="1583892947059">
+    <state x="249" y="4" width="778" height="716" key="CommitChangelistDialog2" timestamp="1584031333739">
       <screen x="0" y="27" width="1280" height="693" />
     </state>
-    <state x="249" y="4" width="778" height="716" key="CommitChangelistDialog2/0.27.1280.693@0.27.1280.693" timestamp="1583892947059" />
-    <state width="1257" height="145" key="GridCell.Tab.0.bottom" timestamp="1584031257193">
+    <state x="249" y="4" width="778" height="716" key="CommitChangelistDialog2/0.27.1280.693@0.27.1280.693" timestamp="1584031333739" />
+    <state width="1257" height="145" key="GridCell.Tab.0.bottom" timestamp="1584033361710">
       <screen x="0" y="27" width="1280" height="693" />
     </state>
-    <state width="1257" height="145" key="GridCell.Tab.0.bottom/0.27.1280.693@0.27.1280.693" timestamp="1584031257193" />
-    <state width="1257" height="145" key="GridCell.Tab.0.center" timestamp="1584031257193">
+    <state width="1257" height="145" key="GridCell.Tab.0.bottom/0.27.1280.693@0.27.1280.693" timestamp="1584033361710" />
+    <state width="1257" height="145" key="GridCell.Tab.0.center" timestamp="1584033361710">
       <screen x="0" y="27" width="1280" height="693" />
     </state>
-    <state width="1257" height="145" key="GridCell.Tab.0.center/0.27.1280.693@0.27.1280.693" timestamp="1584031257193" />
-    <state width="1257" height="145" key="GridCell.Tab.0.left" timestamp="1584031257193">
+    <state width="1257" height="145" key="GridCell.Tab.0.center/0.27.1280.693@0.27.1280.693" timestamp="1584033361710" />
+    <state width="1257" height="145" key="GridCell.Tab.0.left" timestamp="1584033361710">
       <screen x="0" y="27" width="1280" height="693" />
     </state>
-    <state width="1257" height="145" key="GridCell.Tab.0.left/0.27.1280.693@0.27.1280.693" timestamp="1584031257193" />
-    <state width="1257" height="145" key="GridCell.Tab.0.right" timestamp="1584031257193">
+    <state width="1257" height="145" key="GridCell.Tab.0.left/0.27.1280.693@0.27.1280.693" timestamp="1584033361710" />
+    <state width="1257" height="145" key="GridCell.Tab.0.right" timestamp="1584033361710">
       <screen x="0" y="27" width="1280" height="693" />
     </state>
-    <state width="1257" height="145" key="GridCell.Tab.0.right/0.27.1280.693@0.27.1280.693" timestamp="1584031257193" />
+    <state width="1257" height="145" key="GridCell.Tab.0.right/0.27.1280.693@0.27.1280.693" timestamp="1584033361710" />
     <state width="1257" height="196" key="GridCell.Tab.1.bottom" timestamp="1583815499591">
       <screen x="0" y="27" width="1280" height="693" />
     </state>
@@ -252,10 +258,10 @@
       <screen x="0" y="27" width="1280" height="693" />
     </state>
     <state x="132" y="4" key="SettingsEditor/0.27.1280.693@0.27.1280.693" timestamp="1583892382235" />
-    <state x="238" y="4" width="800" height="558" key="Vcs.Push.Dialog.v2" timestamp="1583892948899">
+    <state x="238" y="4" width="800" height="558" key="Vcs.Push.Dialog.v2" timestamp="1584031338577">
       <screen x="0" y="27" width="1280" height="693" />
     </state>
-    <state x="238" y="4" width="800" height="558" key="Vcs.Push.Dialog.v2/0.27.1280.693@0.27.1280.693" timestamp="1583892948899" />
+    <state x="238" y="4" width="800" height="558" key="Vcs.Push.Dialog.v2/0.27.1280.693@0.27.1280.693" timestamp="1584031338577" />
     <state x="302" y="110" key="com.intellij.ide.util.TipDialog" timestamp="1583932764366">
       <screen x="0" y="27" width="1280" height="693" />
     </state>

@@ -1,4 +1,6 @@
-from skeleton import install,read,project_config
+from skeleton import install
+from skeleton import read
+from skeleton import project_config
 
 packages = ['subprocess','pandas']
 
@@ -6,7 +8,7 @@ install(packages)
 
 config = project_config()
 
-df=read(config)
+df = read(config)
 
 print(df)
 

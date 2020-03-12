@@ -1,4 +1,5 @@
-import subprocess, pandas
+import subprocess
+import pandas
 
 class project_config:
     project: str = ''
@@ -24,24 +25,27 @@ def read(config):
         file_name = config.project + '.zip'
 
         out = subprocess.check_output(["ls", config.root_path]).decode("utf-8")
-        if folder not in out.split('\n'): out = subprocess.check_output(["mkdir", config.root_path + folder]).decode("utf-8")
+        if folder not in out.split('\n'):
+            subprocess.check_output(["mkdir", config.root_path + folder]).decode("utf-8")
         out = subprocess.check_output(["ls"]).decode("utf-8")
-        if file_name in out.split('\n'): subprocess.check_output(["rm", file_name]).decode("utf-8")
-        out = subprocess.check_output(['kaggle', 'competitions', 'download', config.project]).decode("utf-8")
-        out = subprocess.check_output(['cp', file_name, config.root_path + folder]).decode("utf-8")
-        out = subprocess.check_output(["rm", file_name]).decode("utf-8")
+        if file_name in out.split('\n'):
+            subprocess.check_output(["rm", file_name]).decode("utf-8")
+        subprocess.check_output(['kaggle', 'competitions', 'download', config.project]).decode("utf-8")
+        subprocess.check_output(['cp', file_name, config.root_path + folder]).decode("utf-8")
+        subprocess.check_output(["rm", file_name]).decode("utf-8")
         out = subprocess.check_output(["ls", config.root_path + folder]).decode("utf-8")
-        if 'raw_data' in out.split('\n'): out = subprocess.check_output(
-            ["rm", '-r', config.root_path + folder + '/raw_data']).decode("utf-8")
-        out = subprocess.check_output(["mkdir", config.root_path + folder + '/raw_data']).decode("utf-8")
-        out = subprocess.check_output(
-            ["unzip", config.root_path + folder + '/' + file_name, '-d', config.root_path + folder + '/raw_data']).decode("utf-8")
+        if 'raw_data' in out.split('\n'):
+            out = subprocess.check_output(["rm", '-r', config.root_path + folder + '/raw_data']).decode("utf-8")
+        subprocess.check_output(["mkdir", config.root_path + folder + '/raw_data']).decode("utf-8")
+        subprocess.check_output(["unzip", config.root_path + folder + '/' + file_name, '-d', config.root_path + folder + '/raw_data']).decode("utf-8")
         df_trn = pandas.read_csv(config.root_path + folder + '/raw_data/train.csv')
         df_trn['_data_'] = 'train'
         df_tst = pandas.read_csv(config.root_path + folder + '/raw_data/test.csv')
         df_tst['_data_'] = 'test'
         df = df_trn.append(df_tst, ignore_index=True)
+        df.to_csv(config.root_path + folder+'/raw.csv',index=False)
+
     else:
         print('Invalid Source')
-        df=None
+        df = None
     return(df)
