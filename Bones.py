@@ -1,5 +1,4 @@
-import subprocess
-import pandas
+import subprocess, pandas
 
 class ProjectConfig:
     Project: str = ''
@@ -44,9 +43,9 @@ def Read(Config):
         Df_tst = pandas.read_csv(Location + '/raw_data/test.csv')
         Df_tst['_data_'] = 'test'
         Df = Df_trn.append(Df_tst, ignore_index=True)
-        Df.to_csv(Config.RootPath + Folder+'/raw.csv',index=False)
+        Df.to_csv(Config.RootPath + Folder+'/raw.csv', index=False)
 
     else:
         print('Invalid Source')
         Df = None
-    return(Df)
+    return Df
