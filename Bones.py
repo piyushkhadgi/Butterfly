@@ -1,51 +1,52 @@
-import subprocess, pandas
+import subprocess
+import pandas
 
 class ProjectConfig:
-    Project: str = ''
-    Source: str = ''
-    RootPath: str = ''
+    project: str = ''
+    source: str = ''
+    root_path: str = ''
 
-    def __init__(self, Project='titanic', Source='kaggle', RootPath='/home/swayush/ML/'):
-        self.Project = Project
-        self.Source = Source
-        self.RootPath = RootPath
+    def __init__(self, project='titanic', source='kaggle', root_path='/home/swayush/ML/'):
+        self.project = project
+        self.source = source
+        self.root_path = root_path
 
 
-def Install(Packages):
-    for Package in Packages:
+def install(packages):
+    for package in packages:
         try:
-            __import__(Package)
+            __import__(package)
         except ImportError:
-            pip.main(['install', Package])
+            pip.main(['install', package])
 
-def Read(Config):
-    if Config.Source == 'kaggle':
-        Folder = 'k_' + Config.Project
-        FileName = Config.Project + '.zip'
-        Location = Config.RootPath + Folder
+def read(config):
+    if config.source == 'kaggle':
+        folder = 'k_' + config.project
+        file_name = config.project + '.zip'
+        location = config.root_path + folder
 
-        Out = subprocess.check_output(["ls", Config.RootPath]).decode("utf-8")
-        if Folder not in Out.split('\n'):
-            subprocess.check_output(["mkdir", Location]).decode("utf-8")
-        Out = subprocess.check_output(["ls"]).decode("utf-8")
-        if FileName in Out.split('\n'):
-            subprocess.check_output(["rm", FileName]).decode("utf-8")
-        subprocess.check_output(['kaggle', 'competitions', 'download', Config.Project]).decode("utf-8")
-        subprocess.check_output(['cp', FileName, Location]).decode("utf-8")
-        subprocess.check_output(["rm", FileName]).decode("utf-8")
-        Out = subprocess.check_output(["ls", Location]).decode("utf-8")
-        if 'raw_data' in Out.split('\n'):
-            Out = subprocess.check_output(["rm", '-r', Location + '/raw_data']).decode("utf-8")
-        subprocess.check_output(["mkdir", Location + '/raw_data']).decode("utf-8")
-        subprocess.check_output(["unzip", Location + '/' + FileName, '-d', Location + '/raw_data']).decode("utf-8")
-        Df_trn = pandas.read_csv(Location + '/raw_data/train.csv')
-        Df_trn['_data_'] = 'train'
-        Df_tst = pandas.read_csv(Location + '/raw_data/test.csv')
-        Df_tst['_data_'] = 'test'
-        Df = Df_trn.append(Df_tst, ignore_index=True)
-        Df.to_csv(Config.RootPath + Folder+'/raw.csv', index=False)
+        out = subprocess.check_output(["ls", config.root_path]).decode("utf-8")
+        if folder not in out.split('\n'):
+            subprocess.check_output(["mkdir", location]).decode("utf-8")
+        out = subprocess.check_output(["ls"]).decode("utf-8")
+        if file_name in out.split('\n'):
+            subprocess.check_output(["rm", file_name]).decode("utf-8")
+        subprocess.check_output(['kaggle', 'competitions', 'download', config.project]).decode("utf-8")
+        subprocess.check_output(['cp', file_name, location]).decode("utf-8")
+        subprocess.check_output(["rm", file_name]).decode("utf-8")
+        out = subprocess.check_output(["ls", location]).decode("utf-8")
+        if 'raw_data' in out.split('\n'):
+            out = subprocess.check_output(["rm", '-r', location + '/raw_data']).decode("utf-8")
+        subprocess.check_output(["mkdir", location + '/raw_data']).decode("utf-8")
+        subprocess.check_output(["unzip", location + '/' + file_name, '-d', location + '/raw_data']).decode("utf-8")
+        df_trn = pandas.read_csv(location + '/raw_data/train.csv')
+        df_trn['_data_'] = 'train'
+        df_tst = pandas.read_csv(location + '/raw_data/test.csv')
+        df_tst['_data_'] = 'test'
+        df = df_trn.append(df_tst, ignore_index=True)
+        df.to_csv(config.root_path + folder+'/raw.csv', index=False)
 
     else:
         print('Invalid Source')
-        Df = None
-    return Df
+        df = None
+    return df

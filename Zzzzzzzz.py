@@ -1,14 +1,14 @@
-from Bones import Install
-from Bones import Read
+from Bones import install
+from Bones import read
 from Bones import ProjectConfig
 
-Packages = ['subprocess','pandas']
+packages = ['subprocess','pandas']
 
-Install(Packages)
+install(packages)
 
-Config = ProjectConfig()
+config = ProjectConfig()
 
-Df = Read(Config)
+df = read(config)
 
 
 
