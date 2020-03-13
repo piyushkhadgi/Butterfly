@@ -1,7 +1,9 @@
 import subprocess
 import pandas
+import pip
 
 class ProjectConfig:
+    """ class created to store all parameters and locations of this project."""
     project: str = ''
     source: str = ''
     root_path: str = ''
@@ -13,6 +15,7 @@ class ProjectConfig:
 
 
 def install(packages):
+    """ Function to install any missing package."""
     for package in packages:
         try:
             __import__(package)
@@ -20,6 +23,7 @@ def install(packages):
             pip.main(['install', package])
 
 def read(config):
+    """ Function to read the modeling data from competition page and store on your system."""
     if config.source == 'kaggle':
         folder = 'k_' + config.project
         file_name = config.project + '.zip'
