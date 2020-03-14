@@ -27,11 +27,6 @@
 # combined = pd.concat([test_df,train_df],ignore_index=True)
 # combined = combined.set_index('PassengerId')
 #
-# del test_df
-# del train_df
-# gc.collect()
-#
-# combined_desc = combined.describe(include='all').transpose()
 #
 # # Feature creation title
 #

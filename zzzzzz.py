@@ -1,5 +1,6 @@
 from bones import install
 from bones import read
+from bones import describe
 from bones import ProjectConfig
 
 packages = ['subprocess', 'pandas']
@@ -8,7 +9,9 @@ install(packages)
 
 config = ProjectConfig()
 
-df = read(config)
+#read(config)
+describe(config)
+
 
 
 

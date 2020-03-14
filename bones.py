@@ -7,12 +7,13 @@ class ProjectConfig:
     project: str = ''
     source: str = ''
     root_path: str = ''
+    raw_file: str=''
 
     def __init__(self, project='titanic', source='kaggle', root_path='/home/swayush/ML/'):
         self.project = project
         self.source = source
         self.root_path = root_path
-
+        self.raw_file = ''
 
 def install(packages):
     """ Function to install any missing package."""
@@ -49,8 +50,14 @@ def read(config):
         df_tst['_data_'] = 'test'
         df = df_trn.append(df_tst, ignore_index=True)
         df.to_csv(config.root_path + folder+'/raw.csv', index=False)
-
+        config.raw_file = config.root_path + folder+'/raw.csv'
     else:
         print('Invalid Source')
-        df = None
-    return df
+    return None
+
+def describe(config):
+    """ Function to describe the modeling data."""
+    df = pandas.read_csv(config.raw_file, delimiter=',')
+    df_s = df.describe(include='all').transpose()
+    df_s.head()
+    return
