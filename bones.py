@@ -13,7 +13,7 @@ class ProjectConfig:
         self.project = project
         self.source = source
         self.root_path = root_path
-        self.raw_file = ''
+        self.raw_file = root_path + source[0:1] + '_' + project + '/raw.csv'
 
 def install(packages):
     """ Function to install any missing package."""
@@ -49,15 +49,8 @@ def read(config):
         df_tst = pandas.read_csv(location + '/raw_data/test.csv')
         df_tst['_data_'] = 'test'
         df = df_trn.append(df_tst, ignore_index=True)
-        df.to_csv(config.root_path + folder+'/raw.csv', index=False)
-        config.raw_file = config.root_path + folder+'/raw.csv'
+        df.to_csv(config.raw_file, index=False)
     else:
         print('Invalid Source')
     return None
 
-def describe(config):
-    """ Function to describe the modeling data."""
-    df = pandas.read_csv(config.raw_file, delimiter=',')
-    df_s = df.describe(include='all').transpose()
-    df_s.head()
-    return
