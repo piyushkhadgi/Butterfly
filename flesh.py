@@ -1,10 +1,9 @@
+import pandas
 
-
-def describe_raw(config):
+def describe(config):
     """ Function to describe the modeling data."""
     df = pandas.read_csv(config.raw_file, delimiter=',')
-    df_s = df.describe(include='all').transpose()
-    return None
+    return df.describe(include='all').transpose()
 
 def feature_create(config):
     """ Function to describe the modeling data."""
@@ -122,7 +121,6 @@ def feature_create(config):
 
     df_ii = pd.DataFrame(IterativeImputer().fit_transform(df.drop('Survived', axis=1)))
     df_ii.columns = df.drop('Survived', axis=1).columns
-    df_ii.index = df.index
     df_ii.index = df.index
     df_ii = pd.concat([df_ii,df.Survived],axis=1)
 

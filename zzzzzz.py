@@ -1,6 +1,6 @@
 from bones import install
 from bones import read
-from bones import describe_raw
+from flesh import describe
 from bones import ProjectConfig
 import pandas
 
@@ -11,7 +11,10 @@ install(packages)
 config = ProjectConfig()
 
 #read(config)
-describe_raw(config)
+df = describe(config)
+
+
+key = df.index.tolist()
 
 
 # todo: Train

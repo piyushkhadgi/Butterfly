@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1f08f003-b4ef-44eb-bc23-cfc8691c984d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bones.py" beforeDir="false" afterPath="$PROJECT_DIR$/bones.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flesh.py" beforeDir="false" afterPath="$PROJECT_DIR$/flesh.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wings.py" beforeDir="false" afterPath="$PROJECT_DIR$/wings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/zzzzzz.py" beforeDir="false" afterPath="$PROJECT_DIR$/zzzzzz.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -300,34 +298,34 @@
     <option name="LAST_COMMIT_MESSAGE" value="Piyush : Bones is final" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="326" y="77" width="624" height="574" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1584150576836">
+    <state x="326" y="54" width="624" height="574" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1585708377004">
       <screen x="0" y="27" width="1280" height="693" />
     </state>
-    <state x="326" y="77" width="624" height="574" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.27.1280.693@0.27.1280.693" timestamp="1584150576836" />
+    <state x="326" y="54" width="624" height="574" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.27.1280.693@0.27.1280.693" timestamp="1585708377004" />
     <state x="376" y="138" width="524" height="532" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1584033927887">
       <screen x="0" y="27" width="1280" height="693" />
     </state>
     <state x="376" y="138" width="524" height="532" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.27.1280.693@0.27.1280.693" timestamp="1584033927887" />
-    <state x="249" y="4" width="778" height="716" key="CommitChangelistDialog2" timestamp="1584162671817">
+    <state x="249" y="4" width="778" height="716" key="CommitChangelistDialog2" timestamp="1584238827455">
       <screen x="0" y="27" width="1280" height="693" />
     </state>
-    <state x="249" y="4" width="778" height="716" key="CommitChangelistDialog2/0.27.1280.693@0.27.1280.693" timestamp="1584162671817" />
-    <state width="1257" height="145" key="GridCell.Tab.0.bottom" timestamp="1584238052989">
+    <state x="249" y="4" width="778" height="716" key="CommitChangelistDialog2/0.27.1280.693@0.27.1280.693" timestamp="1584238827455" />
+    <state width="1257" height="145" key="GridCell.Tab.0.bottom" timestamp="1585709847644">
       <screen x="0" y="27" width="1280" height="693" />
     </state>
-    <state width="1257" height="145" key="GridCell.Tab.0.bottom/0.27.1280.693@0.27.1280.693" timestamp="1584238052989" />
-    <state width="1257" height="145" key="GridCell.Tab.0.center" timestamp="1584238052989">
+    <state width="1257" height="145" key="GridCell.Tab.0.bottom/0.27.1280.693@0.27.1280.693" timestamp="1585709847644" />
+    <state width="1257" height="145" key="GridCell.Tab.0.center" timestamp="1585709847643">
       <screen x="0" y="27" width="1280" height="693" />
     </state>
-    <state width="1257" height="145" key="GridCell.Tab.0.center/0.27.1280.693@0.27.1280.693" timestamp="1584238052989" />
-    <state width="1257" height="145" key="GridCell.Tab.0.left" timestamp="1584238052989">
+    <state width="1257" height="145" key="GridCell.Tab.0.center/0.27.1280.693@0.27.1280.693" timestamp="1585709847643" />
+    <state width="1257" height="145" key="GridCell.Tab.0.left" timestamp="1585709847643">
       <screen x="0" y="27" width="1280" height="693" />
     </state>
-    <state width="1257" height="145" key="GridCell.Tab.0.left/0.27.1280.693@0.27.1280.693" timestamp="1584238052989" />
-    <state width="1257" height="145" key="GridCell.Tab.0.right" timestamp="1584238052989">
+    <state width="1257" height="145" key="GridCell.Tab.0.left/0.27.1280.693@0.27.1280.693" timestamp="1585709847643" />
+    <state width="1257" height="145" key="GridCell.Tab.0.right" timestamp="1585709847643">
       <screen x="0" y="27" width="1280" height="693" />
     </state>
-    <state width="1257" height="145" key="GridCell.Tab.0.right/0.27.1280.693@0.27.1280.693" timestamp="1584238052989" />
+    <state width="1257" height="145" key="GridCell.Tab.0.right/0.27.1280.693@0.27.1280.693" timestamp="1585709847643" />
     <state width="1257" height="196" key="GridCell.Tab.1.bottom" timestamp="1584190510754">
       <screen x="0" y="27" width="1280" height="693" />
     </state>
@@ -348,14 +346,14 @@
       <screen x="0" y="27" width="1280" height="693" />
     </state>
     <state x="132" y="4" key="SettingsEditor/0.27.1280.693@0.27.1280.693" timestamp="1583892382235" />
-    <state x="238" y="4" width="800" height="558" key="Vcs.Push.Dialog.v2" timestamp="1584162673661">
+    <state x="238" y="4" width="800" height="558" key="Vcs.Push.Dialog.v2" timestamp="1584238829026">
       <screen x="0" y="27" width="1280" height="693" />
     </state>
-    <state x="238" y="4" width="800" height="558" key="Vcs.Push.Dialog.v2/0.27.1280.693@0.27.1280.693" timestamp="1584162673661" />
-    <state x="302" y="87" key="com.intellij.ide.util.TipDialog" timestamp="1584150571854">
+    <state x="238" y="4" width="800" height="558" key="Vcs.Push.Dialog.v2/0.27.1280.693@0.27.1280.693" timestamp="1584238829026" />
+    <state x="302" y="41" key="com.intellij.ide.util.TipDialog" timestamp="1585708372049">
       <screen x="0" y="27" width="1280" height="693" />
     </state>
-    <state x="302" y="87" key="com.intellij.ide.util.TipDialog/0.27.1280.693@0.27.1280.693" timestamp="1584150571854" />
+    <state x="302" y="41" key="com.intellij.ide.util.TipDialog/0.27.1280.693@0.27.1280.693" timestamp="1585708372049" />
     <state x="412" y="246" width="451" height="240" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1583891126526">
       <screen x="0" y="27" width="1280" height="693" />
     </state>
