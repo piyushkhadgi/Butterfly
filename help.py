@@ -1,6 +1,7 @@
 import pandas
 import fancyimpute
 import numpy
+import matplotlib.pyplot
 
 def describe(config):
 
@@ -12,7 +13,7 @@ def feature_create(config):
 
     """ Function to describe the modeling data."""
     df = pandas.read_csv(config.raw_file, delimiter=',')
-    
+
     # Feature creation title
     
     df['Title'] = df['Name'].str.extract(' ([A-Za-z]+)\.',expand=False)
@@ -134,7 +135,15 @@ def feature_create(config):
 
     return None
 
+def feature_plot(config):
 
+    """ Function to describe the modeling data."""
+
+    df = pandas.read_csv(config.feature_file, delimiter=',')
+    matplotlib.pyplot.hist(df['Age'])
+    fig = matplotlib.pyplot.figure()
+    fig.savefig('/home/swayush/ML/test.png',bbox_inches='tight')
+    matplotlib.pyplot.close(fig)
 
 
 
