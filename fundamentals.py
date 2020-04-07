@@ -1,6 +1,9 @@
+import pip
 import subprocess
 import pandas
-import pip
+
+#pip.main(['install', package])
+
 
 class ProjectConfig:
     """ class created to store all parameters and locations of this project."""
@@ -8,22 +11,18 @@ class ProjectConfig:
     source: str = ''
     root_path: str = ''
     raw_file: str=''
+    feature_file: str=''
 
     def __init__(self, project='titanic', source='kaggle', root_path='/home/swayush/ML/'):
         self.project = project
         self.source = source
         self.root_path = root_path
         self.raw_file = root_path + source[0:1] + '_' + project + '/raw.csv'
+        self.feature_file = root_path + source[0:1] + '_' + project + '/feature.csv'
 
-def install(packages):
-    """ Function to install any missing package."""
-    for package in packages:
-        try:
-            __import__(package)
-        except ImportError:
-            pip.main(['install', package])
 
 def read(config):
+
     """ Function to read the modeling data from competition page and store on your system."""
     if config.source == 'kaggle':
         folder = 'k_' + config.project
@@ -45,9 +44,9 @@ def read(config):
         subprocess.check_output(["mkdir", location + '/raw_data']).decode("utf-8")
         subprocess.check_output(["unzip", location + '/' + file_name, '-d', location + '/raw_data']).decode("utf-8")
         df_trn = pandas.read_csv(location + '/raw_data/train.csv')
-        df_trn['_data_'] = 'train'
+        df_trn['_data_'] = 1
         df_tst = pandas.read_csv(location + '/raw_data/test.csv')
-        df_tst['_data_'] = 'test'
+        df_tst['_data_'] = 0
         df = df_trn.append(df_tst, ignore_index=True)
         df.to_csv(config.raw_file, index=False)
     else:
