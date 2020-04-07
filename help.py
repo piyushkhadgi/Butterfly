@@ -140,17 +140,9 @@ def feature_plot(config):
     """ Function to describe the modeling data."""
 
     df = pandas.read_csv(config.feature_file, delimiter=',')
-    matplotlib.pyplot.hist(df['Age'])
-    fig = matplotlib.pyplot.figure()
-    fig.savefig('/home/swayush/ML/test.png',bbox_inches='tight')
-    matplotlib.pyplot.close(fig)
+    for x in df.columns:
+        matplotlib.pyplot.hist(df[x])
+        matplotlib.pyplot.title(x)
+        matplotlib.pyplot.savefig(config.root_path + 'k_' + config.project + '/histographs/' + x + '.png', bbox_inches = 'tight', dpi = 100)
+        matplotlib.pyplot.close()
 
-
-
-
-
-# todo: Feature understanding
-# todo: Missing Value
-# todo: Feature engineering
-# todo: Feature understanding
-# todo: Sampling code

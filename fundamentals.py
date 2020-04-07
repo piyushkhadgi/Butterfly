@@ -32,6 +32,11 @@ def read(config):
         out = subprocess.check_output(["ls", config.root_path]).decode("utf-8")
         if folder not in out.split('\n'):
             subprocess.check_output(["mkdir", location]).decode("utf-8")
+
+        out = subprocess.check_output(["ls", location]).decode("utf-8")
+        if 'histographs' not in out.split('\n'):
+            subprocess.check_output(["mkdir", location + '/histographs']).decode("utf-8")
+
         out = subprocess.check_output(["ls"]).decode("utf-8")
         if file_name in out.split('\n'):
             subprocess.check_output(["rm", file_name]).decode("utf-8")
