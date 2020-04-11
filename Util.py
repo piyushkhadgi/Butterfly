@@ -155,6 +155,6 @@ def feature_plot(config):
     for x in df.columns:
         matplotlib.pyplot.hist(df[x])
         matplotlib.pyplot.title(x)
-        matplotlib.pyplot.savefig(config.root_path + 'k_' + config.project + '/histographs/' + x + '.png', bbox_inches = 'tight', dpi = 100)
+        matplotlib.pyplot.savefig(config.proj_path + '/histographs/' + x + '.png', bbox_inches = 'tight', dpi = 100)
         matplotlib.pyplot.close()
 

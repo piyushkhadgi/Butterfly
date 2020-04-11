@@ -1,5 +1,6 @@
 import sklearn.tree
 import pandas
+import subprocess
 
 
 def DT_cls(config):
@@ -18,9 +19,9 @@ def DT_cls(config):
 
     out = subprocess.check_output(["ls",config.result_file]).decode("utf-8")
     if 'result.csv' in out.split('\n'):
-        df = pandas.read_csv(config.result_file, delimiter=',')
-        df.source.unique()
-
+        res = pandas.read_csv(config.result_file, delimiter=',')
+        temp = pandas.DataFrame(filter(lambda x: x.startswith('SKL_DT_'), res.source.unique()), columns=['source'])
+        temp['series'] = pandas.to_numeric(temp['source'].str[-4:])
 
         prediction.to_csv(path_or_buf=config.result_file, index=False, mode = 'a', header = False)
     else:
