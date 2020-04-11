@@ -1,33 +1,16 @@
-# seaborn
-# fancyimpute
-#
-#
-# import pandas as pd
-# import numpy as np
 # import random as rnd
 # import math as m
 # import seaborn as sns
-# import matplotlib.pyplot as plt
-# from fancyimpute import KNN, NuclearNormMinimization, SoftImpute, IterativeImputer, BiScaler
 # from sklearn.svm import SVC, LinearSVC
 # from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
 # from sklearn.neighbors import KNeighborsClassifier
 # from sklearn.naive_bayes import GaussianNB
 # from sklearn.linear_model import Perceptron, SGDClassifier, LogisticRegression
-# from sklearn.tree import DecisionTreeClassifier
 # from sklearn.model_selection import KFold, cross_val_score, GridSearchCV
 # import gc
 # import os
 
-# os.getcwd()
-# os.chdir("/mnt/960CCAFB0CCAD581/Kaggle/Titanic")
-# os.getcwd()
 # gc.collect()
-#
-# combined = pd.concat([test_df,train_df],ignore_index=True)
-# combined = combined.set_index('PassengerId')
-#
-#
 #
 # def KNN_cls(df):
 #     param_grid = dict(n_neighbors=list(range(1,20)),weights = ['uniform', 'distance'])
@@ -44,12 +27,6 @@
 # prediction = KNN_cls(combined_ii)
 # prediction.to_csv('Submit_ii_knn.csv')
 #
-# prediction = KNN_cls(combined_knn)
-# prediction.to_csv('Submit_knn_knn.csv')
-#
-# prediction = KNN_cls(combined_si)
-# prediction.to_csv('Submit_si_knn.csv')
-#
 # def RF_cls(df):
 #     RF_optimal = RandomForestClassifier(n_estimators=optimal_k)
 #     RF_optimal.fit(df.loc[df.train == 1].drop('Survived', axis=1),df.loc[df.train == 1,['Survived']])
@@ -62,12 +39,6 @@
 #
 # prediction = RF_cls(combined_ii)
 # prediction.to_csv('Submit_ii_rf.csv')
-#
-# prediction = RF_cls(combined_knn)
-# prediction.to_csv('Submit_knn_rf.csv')
-#
-# prediction = RF_cls(combined_si)
-# prediction.to_csv('Submit_si_rf.csv')
 #
 # def NB_cls(df):
 #     scoring = 'accuracy'
@@ -201,30 +172,4 @@
 # print(gbm.feature_importances_)
 # len(gbm.feature_importances_)
 # len(combined_ii.columns)
-#
-#
-#
-#
-#
-#
-# x = combined_ii.Age
-# y = combined_ii.Survived
-#
-# def mygini(x,y,m,b):
-#     try:
-#         float(x[1])
-#         z = 1
-#     except:
-#         z = 0
-#         if z = 1:
-#             df = pd.DataFrame({'x' : x,'y' : y})
-#             +
-#             len(x.unique())
-#
-#
-# gc.collect()
-#
-#
-# mygini(combined_ii.loc[combined_ii.train == 1].Age
-# ,combined_ii.loc[combined_ii.train == 1].Survived,5%,10)
 #

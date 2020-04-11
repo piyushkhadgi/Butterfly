@@ -2,6 +2,8 @@ import pandas
 import fancyimpute
 import numpy
 import matplotlib.pyplot
+import sklearn.preprocessing
+
 
 def describe(config):
 
@@ -130,6 +132,16 @@ def feature_create(config):
     df_age = pandas.get_dummies(df.Age_new,prefix = 'Age')
     df = pandas.concat([df,df_age],axis=1)
     df = df.drop(['Age_new'], axis=1)
+
+
+
+
+    def scaleColumns(df, cols_to_scale):
+        for col in cols_to_scale:
+            df[col] = pd.DataFrame(min_max_scaler.fit_transform(pd.DataFrame(dfTest[col])), columns=[col])
+        return df
+
+    df = sklearn.preprocessing.MinMaxScaler().fit_transform(df)
 
     df.to_csv(config.feature_file, index=False)
 

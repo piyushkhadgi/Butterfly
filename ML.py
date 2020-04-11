@@ -1,20 +1,18 @@
-def DT_cls(df):
-    scoring = 'accuracy'
-    k_fold = KFold(n_splits=10, shuffle=True, random_state=0)
-    DT = DecisionTreeClassifier()
-    DT.fit(df.loc[df.train == 1].drop('Survived', axis=1), df.loc[df.train == 1,['Survived']])
-    prediction = pd.DataFrame(DT.predict(df.loc[df.train == 0].drop('Survived', axis=1)))
+import sklearn.tree
+import pandas
+
+
+def DT_cls(config):
+    df = pandas.read_csv(config.feature_file, delimiter=',')
+
+    DT = sklearn.tree.DecisionTreeClassifier()
+    DT.fit(df.loc[df._data_ == 1].drop('Survived', axis=1), df.loc[df._data_ == 1,['Survived']])
+    prediction = pandas.DataFrame(DT.predict(df.loc[df._data_ == 0].drop('Survived', axis=1)))
     prediction.columns = ['Survived']
-    prediction.index = df.loc[df.train == 0].index
+    prediction.index = df.loc[df._data_ == 0].index
     prediction.Survived = prediction.Survived.round().astype(int)
-    gc.collect()
+    prediction.Source = 'SKL_DT'
+    DT_cls_result = prediction
+
     return prediction;
 
-prediction = DT_cls(combined_ii)
-prediction.to_csv('Submit_ii_dt.csv')
-
-prediction = DT_cls(combined_knn)
-prediction.to_csv('Submit_knn_dt.csv')
-
-prediction = DT_cls(combined_si)
-prediction.to_csv('Submit_si_dt.csv')

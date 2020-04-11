@@ -4,7 +4,6 @@ import pandas
 
 #pip.main(['install', package])
 
-
 class ProjectConfig:
     """ class created to store all parameters and locations of this project."""
     project: str = ''
@@ -12,6 +11,9 @@ class ProjectConfig:
     root_path: str = ''
     raw_file: str=''
     feature_file: str=''
+    threshold: float=0.0
+    target: str=''
+    primary: str=''
 
     def __init__(self, project='titanic', source='kaggle', root_path='/home/swayush/ML/'):
         self.project = project
@@ -28,6 +30,8 @@ def read(config):
         folder = 'k_' + config.project
         file_name = config.project + '.zip'
         location = config.root_path + folder
+        config.target = 'Survived'
+        config.primary = 'PassengerId'
 
         out = subprocess.check_output(["ls", config.root_path]).decode("utf-8")
         if folder not in out.split('\n'):
@@ -50,6 +54,7 @@ def read(config):
         subprocess.check_output(["unzip", location + '/' + file_name, '-d', location + '/raw_data']).decode("utf-8")
         df_trn = pandas.read_csv(location + '/raw_data/train.csv')
         df_trn['_data_'] = 1
+        config.threshold = df_trn[config.target].mean()
         df_tst = pandas.read_csv(location + '/raw_data/test.csv')
         df_tst['_data_'] = 0
         df = df_trn.append(df_tst, ignore_index=True)
