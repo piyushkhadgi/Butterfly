@@ -11,16 +11,21 @@ class ProjectConfig:
     root_path: str = ''
     raw_file: str=''
     feature_file: str=''
-    threshold: float=0.0
+    result_file: str=''
+    threshold: float=0.5
     target: str=''
     primary: str=''
 
-    def __init__(self, project='titanic', source='kaggle', root_path='/home/swayush/ML/'):
+    def __init__(self, project='titanic', source='kaggle', root_path='/home/swayush/ML/', threshold = 0.5, target = 'Survived', primary = 'PassengerId'):
         self.project = project
         self.source = source
         self.root_path = root_path
         self.raw_file = root_path + source[0:1] + '_' + project + '/raw.csv'
         self.feature_file = root_path + source[0:1] + '_' + project + '/feature.csv'
+        self.result_file = root_path + source[0:1] + '_' + project + '/result.csv'
+        self.threshold  = threshold
+        self.target = target
+        self.primary = primary
 
 
 def read(config):
@@ -30,8 +35,6 @@ def read(config):
         folder = 'k_' + config.project
         file_name = config.project + '.zip'
         location = config.root_path + folder
-        config.target = 'Survived'
-        config.primary = 'PassengerId'
 
         out = subprocess.check_output(["ls", config.root_path]).decode("utf-8")
         if folder not in out.split('\n'):

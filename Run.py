@@ -5,11 +5,12 @@ from Base import ProjectConfig
 
 if __name__ == '__main__':
 
-    config = ProjectConfig()
+    config = ProjectConfig(project='titanic', source='kaggle', threshold = 0.383838, target = 'Survived', primary = 'PassengerId')
+
 #    read(config)
 #    print(describe(config).head(10))
-    feature_create(config)
-    feature_plot(config)
+#    feature_create(config)
+#    feature_plot(config)
 
 
     DT_cls(config)
