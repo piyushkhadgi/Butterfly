@@ -133,19 +133,22 @@ def feature_create(config):
     df = pandas.concat([df,df_age],axis=1)
     df = df.drop(['Age_new'], axis=1)
 
-
-
-
-    def scaleColumns(df, cols_to_scale):
-        for col in cols_to_scale:
-            df[col] = pd.DataFrame(min_max_scaler.fit_transform(pd.DataFrame(dfTest[col])), columns=[col])
-        return df
-
-    df = sklearn.preprocessing.MinMaxScaler().fit_transform(df)
+    df = scaleColumns(config,df)
 
     df.to_csv(config.feature_file, index=False)
 
     return None
+
+def scaleColumns(config,df):
+    cols_to_scale = df.select_dtypes(include=numpy.number).columns.tolist()
+    if config.target in cols_to_scale:
+        cols_to_scale.remove(config.target)
+    if config.primary in cols_to_scale:
+        cols_to_scale.remove(config.primary)
+    scaler = sklearn.preprocessing.MinMaxScaler()
+    for col in cols_to_scale:
+        df[col] = pandas.DataFrame(scaler.fit_transform(pandas.DataFrame(df[col])), columns=[col])
+    return df
 
 def feature_plot(config):
 

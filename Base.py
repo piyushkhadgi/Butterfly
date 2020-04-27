@@ -26,6 +26,7 @@ class ProjectConfig:
         self.raw_file = self.proj_path + '/raw.csv'
         self.feature_file = self.proj_path + '/feature.csv'
         self.result_file = self.proj_path + '/result.csv'
+        self.temp_loc = self.proj_path + '/temp/'
         self.threshold = threshold
         self.target = target
         self.primary = primary
@@ -37,7 +38,7 @@ def read(config):
     if config.source == 'kaggle':
         folder = 'k_' + config.project
         file_name = config.project + '.zip'
-        location = config.proj_path
+#        location = config.proj_path
 
         out = subprocess.check_output(["ls", config.root_path]).decode("utf-8")
         if folder not in out.split('\n'):
@@ -46,7 +47,8 @@ def read(config):
         out = subprocess.check_output(["ls", config.proj_path]).decode("utf-8")
         if 'histographs' not in out.split('\n'):
             subprocess.check_output(["mkdir", config.proj_path + '/histographs']).decode("utf-8")
-
+        if 'temp' not in out.split('\n'):
+            subprocess.check_output(["mkdir", config.temp_loc]).decode("utf-8")
         out = subprocess.check_output(["ls"]).decode("utf-8")
         if file_name in out.split('\n'):
             subprocess.check_output(["rm", file_name]).decode("utf-8")
